@@ -1,0 +1,39 @@
+@import "./Global.scss";
+
+#home {
+	min-height: 100vh;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	background-color: rgba($color: rgb(245, 245, 245), $alpha: 0.9);
+
+	#Card {
+		text-align: center;
+		background-color: white;
+		box-shadow: 0 2px 8px 0 rgb(38 38 55 / 25%);
+		padding: 16px;
+		border-radius: 15px;
+		width: 500px;
+		@include responsive(phone) {
+			width: 300px;
+			min-height: 30vh;
+		}
+		.description {
+			padding: 0 0 20px 0;
+		}
+		.links {
+			display: flex;
+			justify-content: center;
+			gap: 20px;
+			a {
+				text-decoration: none;
+				color: blue;
+				transition: 0.5s;
+				&:hover {
+					transform: scale(1.1);
+				}
+			}
+		}
+	}
+}
